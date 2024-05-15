@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
+// using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class XRSettingsListener : MonoBehaviour
 {
     public TunnelingVignetteController tunnelingVignetteController;
-    public ActionBasedControllerManager controllerManager;
+    // public ActionBasedControllerManager controllerManager;
     private void Awake()
     {
         XRSettingsManager.XRSettingsChange += UpdateXRSettings;
@@ -27,7 +27,7 @@ public class XRSettingsListener : MonoBehaviour
         if(XRSettingsManager.Instance != null)
         {
             tunnelingVignetteController.gameObject.SetActive(XRSettingsManager.Instance.isVignetteActive());
-            controllerManager.smoothTurnEnabled = XRSettingsManager.Instance.isContinuousTurnActive();
+            // controllerManager.smoothTurnEnabled = XRSettingsManager.Instance.isContinuousTurnActive();
         }
         else
         {
